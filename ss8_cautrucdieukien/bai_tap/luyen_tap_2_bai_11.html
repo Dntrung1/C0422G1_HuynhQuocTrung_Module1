@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--viết một chương trình để nhập lương nhân viên,-->
+<!--tính thuế thu nhập và lương ròng (số tiền lương thực sự mà nhân viên đó nhận được).-->
+<!--30% thuế thu nhập nếu lương > 15 triệu-->
+<!--20% thuế thu nhập nếu lương >= 7 đến 15 triệu-->
+<!--10% thuế thu nhập nếu lương < 7 triệu-->
+<script>
+    let salary= parseFloat(prompt("Nhập lương"))
+    let salaryaftertax
+    if (salary > 15000000){
+        salaryaftertax = (salary * 30 ) / 100
+    }else if (salary >= 7000000){
+        salaryaftertax = (salary * 20 ) / 100
+    }else
+        salaryaftertax = (salary * 10 ) / 100
+
+    document.write("Lương sau thuế : " + salaryaftertax)
+</script>
+</body>
+</html>
