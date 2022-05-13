@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bài 1
+    // for (let number=0 ; number<5 ; number++){
+    //     document.write("The number is : " + number + "<br>")
+    // }
+
+    //Bài 2
+    let number = parseInt(prompt("Nhập 1 số bất kỳ"))
+    let total = 0
+    if (number > 0){
+        for (let i = 1 ; i <= number ; i++){
+            total = total + i // total += i
+        }document.write("Total : " + total)
+    }else
+        document.write("Nhập lại")
+</script>
+</body>
+</html>
