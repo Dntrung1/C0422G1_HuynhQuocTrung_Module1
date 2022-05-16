@@ -5,6 +5,25 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let number = parseInt(prompt("Nhập n số nguyên tố muốn hiện"));
+    let count = 0;
+    let n = 1;
+    let dem= 0
+    while (count < number){
+        for (var i = 1 ; i <= n ; i++){
+            if (n % i ==0){
+                dem = dem + 1
+            }
+        }
+        if (dem == 2){
+            document.write(n + "<br>")
+            count= count +1
+        }
+        n++
+        dem=0
+    }
 
+</script>
 </body>
 </html>

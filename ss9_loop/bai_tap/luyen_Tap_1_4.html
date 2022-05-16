@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+    let f = 1
+    let j = 0
+    for (let i = 1; i < 20; i++) {
+        f = f + j
+        j = f - j
+        if (f % 5 ==0){
+            document.write(f + "<br>")
+            break;
+        }
+    }
+</script>
+</body>
+</html>
