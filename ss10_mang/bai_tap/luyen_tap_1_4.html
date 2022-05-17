@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = Array(5)
+    let arr2 = Array()
+    let j = 0
+    for (let i=0; i< arr.length; i++){
+        arr[i]= parseInt(prompt("Nhập số index " + i))
+        document.write(arr[i] + "<br>")
+    }
+    document.write("<br>")
+    for (let i=arr.length -1 ; i >=0; i--) {
+        arr2[j] = arr[i];
+        j++;
+    }
+    for (let value of arr2) {
+        document.write(value + "<br>")
+    }
+
+
+
+</script>
+</body>
+</html>
