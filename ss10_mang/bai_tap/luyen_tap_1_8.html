@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr= Array(10)
+    for (let i = 0; i < arr.length ; i++) {
+        arr[i] = parseInt(prompt("Nhập phần tử"))
+    }
+    for (let i= 0; i <arr.length; i++){
+        for (let j=0; j<arr.length;j++){
+            if (arr[i] > arr[j]){
+                let n = arr[i]
+                arr[i]=arr[j]
+                arr[j] = n
+            }
+        }
+    }
+    document.write(arr)
+</script>
+</body>
+</html>
