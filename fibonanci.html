@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x=0
+    let y=1
+    let fibonaci= x + y
+    for (let i = 0; i < 20; i++) {
+        document.write(fibonaci + "<br>")
+        fibonaci=fibonaci + x
+        x=y
+        y=fibonaci
+    }
+
+</script>
+</body>
+</html>

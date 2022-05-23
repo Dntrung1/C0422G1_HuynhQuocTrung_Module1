@@ -7,18 +7,18 @@
 <body>
 <script>
     // Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
-    let x= parseInt(prompt("nhập 1 số"))
-    let y=parseInt(prompt("nhâp số thư 2"))
-    function swap() {
+    let x= parseInt(prompt("nhập x"));
+    let y=parseInt(prompt("nhâp y"));
+    function swap(x,y) {
         let z
-        z=x
-        x=y
-        y=z
-        document.write("x = " + x)
-        document.write("<br>")
-        document.write("y = " + y)
+        z = x
+        x = y
+        y = z
+        document.write("x' = " + x);
+        document.write("<br>");
+        document.write("y' = " + y);
     }
-    swap()
+    swap(x,y)
 </script>
 </body>
 </html>
