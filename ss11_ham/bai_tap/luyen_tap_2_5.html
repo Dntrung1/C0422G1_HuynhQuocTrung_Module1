@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x =parseInt(prompt("nhập số thứ nhất"))
+    let y =parseInt(prompt("nhập số thứ hai"))
+    let z =parseInt(prompt("nhập số thứ ba"))
+    function xmin(x,y,z) {
+        let min = x
+        if (y < min){
+            min = y
+        }
+        if (z < min){
+            min = z
+        }
+        // return min;
+    }
+    document.write(xmin(x,y,z))
+</script>
+</body>
+</html>

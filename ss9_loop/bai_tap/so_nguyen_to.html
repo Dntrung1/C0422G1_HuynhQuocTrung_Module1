@@ -6,22 +6,22 @@
 </head>
 <body>
 <script>
-    let number = parseInt(prompt("Nhập n số nguyên tố muốn hiện"));
-    let count = 0;
-    let n = 1;
-    let dem= 0
-    while (count < number){
-        for (var i = 1 ; i <= n ; i++){
-            if (n % i ==0){
-                dem = dem + 1
+    let number = (parseInt(prompt("Nhap so nguyen to")))
+    let count = 0
+    let n = 2;
+    while(count < number){
+        let flag = true;
+        for(let i = 2 ; i < n ; i++){
+            if (n % i == 0){
+                flag = false
+                break;
             }
         }
-        if (dem == 2){
-            document.write(n + "<br>")
-            count= count +1
+        if(flag === true){
+            count++;
+            document.write(n + "<br/>")
         }
-        n++
-        dem=0
+        n++;
     }
 
 </script>

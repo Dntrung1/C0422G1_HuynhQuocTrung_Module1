@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let x = 0
+    // let y = 1
+    // for (let i = 0; i <= 1000; i++) {
+    //     let sum = x + y
+    //     document.write( sum + "<br>")
+    //     x = y
+    //     y = sum
+    // }
+    let fibo=[1,1]
+    let i=0
+    while (fibo[fibo.length-1]<=10000){
+        fibo.push(fibo[i]+fibo[i+1])
+        i++
+    }
+    document.write(fibo + "<br>")
+
+    for (j=0;j<fibo.length;j++){
+        let count=0
+        for (let k = 2; k <= fibo[j]; k++) {
+            if (fibo[j]%k==0){
+                count++
+                break
+            }
+        }
+        if (count==1){
+            document.write(fibo[j] + "<br>")
+        }
+    }
+
+
+</script>
+</body>
+</html>

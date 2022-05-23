@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x= parseInt(prompt("Nhập bán kính"))
+    let y= 3.14
+    function acreage() {
+        let total= y * (x**2)
+        document.write("Diện tích : " + total)
+    }
+    function perimeter() {
+        let total= 2 * y * x
+        document.write("Chu vi : " + total)
+    }
+    acreage(x)
+    document.write("<br>")
+    perimeter(x)
+</script>
+</body>
+</html>
