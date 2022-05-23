@@ -5,37 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="name">
-<button type="button" onclick="search()">Search</button>
-<p id="result"></p>
 <script>
-    function search() {
-        let name = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
-        let sao = ["Ursa Minor", "Tarurus", "Cygnus","Lyra", "Aquila", "Ursa Major","Leo"]
-        let x = document.getElementById("name").value
-        for (let i = 0; i < name.length; i++) {
-            if (x==name[i]){
-                document.getElementById("result").innerText = sao[i]
-            }else
-                document.getElementById("result").innerText = "Không tìm thấy kết quả"
-        }
+    let a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let b = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    function star(string) {
+        for (let i=0;i<a.length;i++){
+            if (a[i]===string){
+                result = b[i]
+                break;
+            } else {
+                result = "Không thầy chòm sao nào"
+            }
+        } return result
     }
-    // let a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
-    // let b = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
-    // function star(string) {
-    //     for (let i=0;i<a.length;i++){
-    //         if (a[i]==string){
-    //             result = b[i]
-    //             break;
-    //         } else {
-    //             result = "Không thầy chòm sao nào"
-    //         }
-    //     } return result
-    // }
-    // let x = prompt("Nhập vào chòm sao cần tìm:")
-    // document.write(star(x))
-
-</script>
+    let x = prompt("Nhập vào chòm sao cần tìm:")
+    document.write(star(x))
 </script>
 </body>
 </html>
