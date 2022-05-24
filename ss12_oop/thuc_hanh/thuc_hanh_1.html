@@ -42,6 +42,15 @@
             this.month = newMonth
             this.year = newYear
         }
+        toString(){
+            if (this.day < 10){
+                this.day = "0" + this.day
+            }
+            if (this.month < 10){
+                this.month = "0" + this.month
+            }
+            return this.day + "/" + this.month + "/" + this.year
+        }
     }
 
     let date = new MyDate(8,10,1999)
@@ -64,7 +73,7 @@
     document.write("<br>")
 
     date.setDate(2,2,1970)
-    document.write("Date mới : " + date.getDay() + "/" + date.getMonth() + "/" + date.getYear())
+    document.write(date.toString())
 
 
 </script>
