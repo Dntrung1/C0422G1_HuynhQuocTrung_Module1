@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class rectangle{
+        constructor(length,width) {
+            this.length = length ;
+            this.width = width ;
+        }
+        getLength(){
+            return this.length ;
+        }
+        getWidth(){
+            return this.width ;
+        }
+        getAcreage(){
+            return this.length * this.width;
+        }
+        getPerimeter(){
+            return (this.length + this.width) * 2 ;
+        }
+        setChange(newLength,newWidth){
+            this.length = newLength ;
+            this.width = newWidth ;
+        }
+    }
+    let length=parseInt(prompt("Nhập chiều dài"))
+    let width=parseInt(prompt("Nhập chiều rộng"))
+    let hcn = new rectangle(length,width)
+    document.write("Diện tích hình chữ nhật là : " + hcn.getAcreage() + "<br>") ;
+    document.write("Chu vi hình chữ nhật là : " + hcn.getPerimeter() + "<br>") ;
+
+    let length2=parseInt(prompt("Nhập chiều dài mới"))
+    let width2=parseInt(prompt("Nhập chiều rộng mới"))
+    hcn.setChange(length2,width2)
+    document.write("Chiều dài mới : " + hcn.getLength() + "<br>")
+    document.write("Chiều dài rộng mới : " + hcn.getWidth() + "<br>")
+    document.write("Diện tích hình chữ nhật mới là : " + hcn.getAcreage() + "<br>")
+    document.write("chu vi hình chữ nhật mới là : " + hcn.getPerimeter())
+</script>
+</body>
+</html>

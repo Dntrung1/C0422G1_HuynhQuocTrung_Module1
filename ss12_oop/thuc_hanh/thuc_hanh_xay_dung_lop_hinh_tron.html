@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<SCRIPT>
+    class Circle {
+        constructor(radius) {
+            this.radius = radius
+        }
+        getRadius(){
+            return this.radius
+        }
+        getArea(){
+            return Math.PI * this.radius * this.radius
+        }
+    }
+    let vongTron = new Circle(2)
+    document.write("Radius : " + vongTron.getRadius() + "<br>")
+    document.write("Area : " + vongTron.getArea())
+</SCRIPT>
+</body>
+</html>

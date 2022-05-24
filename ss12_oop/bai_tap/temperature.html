@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(c) {
+            this.c=c
+        }
+        getFahrenheit(){
+            return ((9 / 5) * this.c + 32)
+        }
+        getKelvin(){
+            return (273.15 + this.c)
+        }
+        setCelsius(newCelsius){
+            this.c= newCelsius
+        }
+    }
+    let x= parseFloat(prompt("Nhập độ C"))
+    let nhietDo= new Temperature(x)
+    document.write("Nhiệt độ F : " + nhietDo.getFahrenheit() + "<br>")
+    document.write("Nhiệt độ K : " + nhietDo.getKelvin() + "<br>")
+
+    let y= parseFloat(prompt("Nhập độ C mới"))
+    nhietDo.setCelsius(y)
+        document.write("Nhiệt độ F mới : " + nhietDo.getFahrenheit() + "<br>")
+        document.write("Nhiệt độ K mới : " + nhietDo.getKelvin() + "<br>")
+</script>
+</body>
+</html>
