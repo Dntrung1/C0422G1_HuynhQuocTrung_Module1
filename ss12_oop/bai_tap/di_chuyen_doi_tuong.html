@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="game"></div>
+<script>
+    class Hero{
+        constructor(image,top,left,size) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+        }
+        getHeroElement() {
+            return '<img width="'+ this.size + '"' +
+                ' height="'+ this.size + '"' +
+                ' src="' + this.image +'"' +
+                ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+        }
+        moveRight(){
+            this.left = this.left + 20
+        }
+        moveDown(){
+            this.down = this.down + 20
+        }
+        setSpeed(newSpeed){
+            this.speed = newSpeed
+        }
+        getSpeed(){
+            return this.speed
+        }
+    }
+    let hero= new Hero('https://vcdn-vnexpress.vnecdn.net/2020/11/14/bugatti-1605367702-1605368320-6458-1605370896.jpg', 20, 30, 200)
+    let speed = parseInt(prompt("Nhập tốc độ thay đổi"))
+    hero.setSpeed(speed)
+    function start(){
+        if(hero.left < window.innerWidth - hero.size){
+            hero.moveRight();
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start, hero.getSpeed())
+    }
+    start();
+</script>
+</body>
+</html>
