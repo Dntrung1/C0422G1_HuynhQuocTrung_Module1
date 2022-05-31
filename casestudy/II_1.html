@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = parseFloat(prompt("Nhập tiên lương"))
+    if (salary>=15){
+        document.write("Thuế phải trả là: " + (salary * 20)/100 + "<br>")
+        document.write("Lương sau thuế là: " + (salary - (salary * 20)/100))
+    }else if (salary >= 7 && salary <15){
+        document.write("Thuế phải trả là: " + (salary * 10)/100 + "<br>")
+        document.write("Lương sau thuế là: " + (salary - (salary * 10)/100))
+    }else if (salary < 7){
+        document.write("Thuế phải trả là: " + (salary * 5)/100 + "<br>")
+        document.write("Lương sau thuế là: " + (salary - (salary * 5)/100))
+    }
+</script>
+</body>
+</html>

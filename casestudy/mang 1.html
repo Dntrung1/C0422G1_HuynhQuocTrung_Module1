@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = parseInt(prompt("Nhập độ dài của mảng"))
+    let arr= []
+    for (let i = 0; i < m; i++) {
+        let n= parseInt(prompt("Nhập độ dài cảu phần tử " + i))
+        let arr1 = []
+        for (let j = 0; j < n; j++) {
+            arr1[j]= parseInt(prompt("Nhập phần tử" + (j+1)))
+        }
+        arr.push(arr1)
+        document.write(arr1 + "<br>")
+    }
+    console.log(arr)
+
+</script>
+</body>
+</html>

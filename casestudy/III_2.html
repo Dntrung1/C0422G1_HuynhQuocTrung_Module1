@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function inputArray(arr) {
+        let n = parseInt(prompt("độ dài của mảng"))
+        for (let i = 0; i < n; i++) {
+             arr[i] = parseInt(prompt("Nhập số"))
+        }
+        alert("đã nhâp xong mảng")
+    }
+    let a = []
+    inputArray(a)
+    document.write(a + "<br>")
+    let b = []
+    inputArray(b)
+    document.write(b + "<br>")
+    let c = []
+    for (let i = 0; i < b.length; i++) {
+        if (a.indexOf(b[i]) == -1 && c.indexOf(b[i])==-1){
+            c.push(b[i])
+        }
+    }
+    document.write(c)
+</script>
+</body>
+</html>

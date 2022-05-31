@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập vào")
+    let arr = []
+    for (let i = 0; i < str.length; i++) {
+        if (arr.indexOf(str[i]) === -1){
+            arr.push(str[i])
+        }
+    }
+    document.write(str + "<br>")
+    document.write("Số ký tư giống nhau là: " + arr.length + " gồm: " + arr )
+</script>
+</body>
+</html>

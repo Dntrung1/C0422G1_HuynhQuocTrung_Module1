@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = prompt("Nhập 1 chuỗi bất kỳ")
+    x = x.trim().toLowerCase()
+    let arr= x.split("")
+    arr[0]=arr[0].toUpperCase()
+    for (let i =0; i < arr.length; i++) {
+        if (arr[i] === " " && arr[i - 1] === " ") {
+            arr.splice(i,1)
+            i--
+        }
+        if (arr[i] !== " " && arr[i-1] === " "){
+            arr.splice(i,1,arr[i].toUpperCase())
+        }
+
+    }
+    document.write(arr.join("") + "<br>")
+    let arr1= arr.join("").split(" ")
+    let max = arr1[0].length
+    let index = 0
+    for (let i = 0; i < arr1.length; i++) {
+        if (max < arr1[i].length){
+            max = arr1[i].length
+            index = arr1[i]
+        }
+    }
+    document.write("Từ dài nhất là :"  + index + " với số chữ là:  " + max )
+</script>
+</body>
+</html>

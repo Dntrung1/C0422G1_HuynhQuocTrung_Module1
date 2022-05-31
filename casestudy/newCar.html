@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bảng xe</h2>
+<button type="button" onclick="create()">Create</button>
+<p id="result"></p>
+<script>
+    class MyCar{
+        constructor(name,price,color,producer) {
+            this._name = name;
+            this._price = price;
+            this._color = color;
+            this._producer = producer;
+        }
+
+        getName() {
+            return this._name;
+        }
+
+        setName(value) {
+            this._name = value;
+        }
+
+        getPrice() {
+            return this._price;
+        }
+
+        setPrice(value) {
+            this._price = value;
+        }
+
+        getColor() {
+            return this._color;
+        }
+
+        setColor(value) {
+            this._color = value;
+        }
+
+        getProducer() {
+            return this._producer;
+        }
+
+        setProducer(value) {
+            this._producer = value;
+        }
+    }
+    let toyora= new MyCar("Toyota","500","Black","Toyota")
+    let honda= new MyCar("Honda","250","red","Honda")
+    let newArray = [toyora,honda]
+    function display() {
+        let str = "<table border=\"1px\">\n" +
+            "    <tr>\n" +
+            "        <th>Tên</th>\n" +
+            "        <th>Giá</th>\n" +
+            "        <th>Màu</th>\n" +
+            "        <th>Nhà sản xuất</th>\n" +
+            "        <th colspan='2'>Thêm hoặc xóa</th>\n" +
+            "    </tr>"
+        for (let i = 0; i < newArray.length; i++) {
+            str += "    <tr>\n" +
+                "        <td>"+ newArray[i].getName()+"</td>\n" +
+                "        <td>"+newArray[i].getPrice()+"</td>\n" +
+                "        <td>"+newArray[i].getColor()+"</td>\n" +
+                "        <td>"+newArray[i].getProducer()+"</td>\n" +
+                "        <td><button type='button' onclick='update("+i+")'>Update</button></td>\n" +
+                "        <td><button type='button' onclick='remove("+i+")'>Delete</button></td>\n" +
+                "    </tr>"
+        }
+        str += "</table>"
+        document.getElementById("result").innerHTML= str
+    }
+    display()
+   function create() {
+        let name = prompt("Nhập tên mới")
+        let price = prompt("Nhập Giá")
+        let color = prompt("Nhập màu")
+        let producer = prompt("Nhập nhà sản xuất")
+       let newCar = new MyCar(name,price,color,producer)
+       newArray.push(newCar)
+       display(newArray)
+   }
+   function update(index) {
+       let name = prompt("Nhập lại tên ")
+       let price = prompt("Nhập lại Giá")
+       let color = prompt("Nhập lại màu")
+       let producer = prompt("Nhập lại nhà sản xuất")
+
+       newArray[index].setName(name)
+       newArray[index].setPrice(price)
+       newArray[index].setColor(color)
+       newArray[index].setProducer(producer)
+       display()
+   }
+   function remove(index) {
+        if (confirm("Bạn có chắc muốn xóa không?")){
+            newArray.splice(index,1)
+            alert("Bạn đã xóa thành công")
+        }
+        display(newArray)
+   }
+</script>
+</body>
+</html>

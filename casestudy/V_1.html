@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[]
+    let x = parseInt(prompt("Nhấp độ dài của mảng"))
+    for (let i = 0; i < x; i++) {
+        let y= parseInt(prompt("Nhập số lượng phần tử"))
+        let arr1= []
+        for (let j = 0; j < y; j++) {
+            arr1[j]=parseInt(prompt("Nhập phần tử " + j))
+        }
+        arr.push(arr1)
+        document.write(arr1 + "<br>")
+    }
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j] % 2 ===0){
+                sum = sum + arr[i][j]
+            }
+        }
+    }
+    document.write(sum)
+</script>
+</body>
+</html>
